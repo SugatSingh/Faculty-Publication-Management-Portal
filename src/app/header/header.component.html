@@ -15,11 +15,12 @@ fxLayoutGap="10px">
 </div>
 <div class="container jumbotron">
     <mat-toolbar color="primary">
-        <a>Home</a>
         <span class="flex-spacer"></span>
         <mat-form-field>
             <input matInput placeholder="Search" type="search">
         </mat-form-field>
         <button mat-button><span class="fa fa-search fa-lg"></span></button>
+        <span class="flex-spacer"></span>
+        <a mat-button (click)="getSignIn()"><span class="fa fa-sign-in fa-lg"></span> Sign In</a>
     </mat-toolbar>
 </div>

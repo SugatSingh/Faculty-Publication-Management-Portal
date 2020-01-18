@@ -1,0 +1,83 @@
+<div fxFlex fxLayout="column">
+    <span class="flex-spacer"></span>
+    <div fxFlex>
+        <mat-toolbar>
+                <span class="flex-spacer"></span>       
+                <button mat-button>Article</button>           
+                <button mat-button>Journal</button>           
+                <button mat-button>Research Paper</button>         
+                <button mat-button>Proceedings</button>         
+                <button mat-button>Conference Minutes</button>
+                <span class="flex-spacer"></span>
+        </mat-toolbar>
+    </div>
+    <div fxFlex fxFlexOffset="50px" class="form-size">
+        <form novalidate [formGroup]="articlegroup" (ngSubmit) = "onarticleSubmit()" #articleform="ngForm">
+            <p>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "publication_id" placeholder="Publication ID" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('publication_id').hasError('required') && articlegroup.get('publication_id').touched">Publication ID is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Editor" placeholder="Editor" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('Editor').hasError('required') && articlegroup.get('Editor').touched">Editor is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Volume" placeholder= "Volume" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('Volume').hasError('required') && articlegroup.get('Volume').touched">Volume is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Periodical_Title" placeholder= "Periodical Title" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('Periodical_Title').hasError('required') && articlegroup.get('Periodical_Title').touched">Periodical Title is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Month" placeholder= "Month" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('Month').hasError('required') && articlegroup.get('Month').touched">Month is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Day" placeholder="Day" type="number" required>
+                    <mat-error *ngIf="articlegroup.get('Day').hasError('required') && articlegroup.get('Day').touched">Day is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Issues" placeholder="Issues" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('Issues').hasError('required') && articlegroup.get('Issues').touched">Issues is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "ISSN" placeholder="ISSN" type="text" required>
+                    <mat-error *ngIf="articlegroup.get('ISSN').hasError('required') && articlegroup.get('ISSN').touched">ISSN is required</mat-error>
+                </mat-form-field>
+            </p>
+            <button mat-button type="submit" class="background-primary text-floral-white" [disabled]="articlegroup.invalid">Submit</button>
+        </form>
+        <form novalidate [formGroup]="proceedinggroup" (ngSubmit) = "onproceedingSubmit()" #proceedingform="ngForm">
+            <p>
+        
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "publication_id" placeholder="Publication ID" type="text" required>
+                    <mat-error *ngIf="proceedinggroup.get('publication_id').hasError('required') && proceedinggroup.get('publication_id').touched">Publication ID is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Editor" placeholder="Editor" type="text" required>
+                    <mat-error *ngIf="proceedinggroup.get('Editor').hasError('required') && proceedinggroup.get('Editor').touched">Editor is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "region" placeholder= "Region" type="text" required>
+                    <mat-error *ngIf="proceedinggroup.get('region').hasError('required') && proceedinggroup.get('region').touched">Region is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Conference_Name" placeholder= "Conference Publication Name" type="text" required>
+                    <mat-error *ngIf="proceedinggroup.get('Conference_Name').hasError('required') && proceedinggroup.get('Conference_Name').touched">Conference Name is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Month" placeholder= "Month" type="text" required>
+                    <mat-error *ngIf="proceedinggroup.get('Month').hasError('required') && proceedinggroup.get('Month').touched">Month is required</mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName = "Pagenumber" placeholder="Page Number" type="number" required>
+                    <mat-error *ngIf="proceedinggroup.get('Pagenumber').hasError('required') && proceedinggroup.get('Pagenumber').touched">Page Number is required</mat-error>
+                </mat-form-field>
+            </p>
+            <button mat-button type="submit" class="background-primary text-floral-white" [disabled]="proceedinggroup.invalid">Submit</button>
+            </form>
+    </div>
+</div>
