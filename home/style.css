@@ -63,6 +63,49 @@ border: 1px solid #563d7c;
     height: 40vh;
     object-fit: cover;
 }
+header{
+	padding-top: 3rem; 
+	margin-left: 8em;
+	 padding-bottom: 3rem;
+}
+section{
+ margin-left: 8em;
+	 padding-bottom: 3rem;
+	margin-right: 3rem;
+}
+a.badge{
+	padding-bottom: 0.4rem;
+	padding-top: 0.4rem;
+}
+aside{
+	margin-left: 8em;
+	margin-right: 3rem;
+}
+
+img.img-fluid{
+ display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.card-body{
+	padding-top: 4rem;
+}
+.card-body h5{
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+.card{
+	margin-bottom: 2rem;
+}
+.list-group{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+figcaption{
+	margin-left: auto;
+	margin-right:auto;
+	width: 8rem;
+}
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
